@@ -1,0 +1,57 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a href="" class="navbar-brand">
+                Book E-Commerce Website
+            </a>
+        </div>
+    </div>
+    <!-- <div *ngIf="submitted" class="m-2 text-center">
+        <h2>Thanks!</h2>
+        <p>We'll ship your goods in 3-5 business days</p>
+        <button class="btn btn-primary" routerLink="/aciStore">
+            Return to AciStore
+        </button>
+    </div> -->
+    <form #form="ngForm" novalidate (ngSubmit)="submitBook(form)" class="m-2">
+        <div class="form-group">
+ 
+            <label>ID</label>
+            <input type="number" class="form-control" id="id" name="id" [(ngModel)]="book.id" #name="ngModel" required />
+ 
+            <label>Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="book.title" #name="ngModel" required />
+ 
+            <label>Author</label>
+            <input type="text" class="form-control" id="author" name="author" [(ngModel)]="book.author" #name="ngModel" required />
+            
+ 
+            <label>Price</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="book.price" #name="ngModel" required />
+            
+ 
+            <label>Number of books In Stock</label>
+            <input type="number" class="form-control" id="noInStock" name="noInStock" [(ngModel)]="book.noInStock" #name="ngModel" required />
+            
+ 
+            <label>Number of books to order</label>
+            <input type="number" class="form-control" id="stopOrder" name="stopOrder" [(ngModel)]="book.stopOrder" #name="ngModel" required />
+            
+ 
+            <label>Re-ordering threshold</label>
+            <input type="number" class="form-control" id="reorderingThreshold" name="reorderingThreshold" [(ngModel)]="book.reorderingThreshold" #name="ngModel" required />
+            
+ 
+        </div>
+        <div class="text-center">
+            <button class="btn btn-secondary m-1" routerLink="/cart">
+            Back</button>
+        </div>
+        <div class="text-center">
+        <button class="btn btn-primary m-1" type="submit">
+            Submit book
+        </button>
+        </div>
+    </form>
+    
+</div>

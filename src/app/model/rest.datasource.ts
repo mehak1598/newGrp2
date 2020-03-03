@@ -28,7 +28,7 @@ export class RestDataSource{
     }
 
     deleteBook(id: number): Observable<Book>{
-        return this.http.delete<Book>(this.baseUrl+"/books/delete"+id);
+        return this.http.delete<Book>(this.baseUrl+"/books/delete/"+id);
     }
 
     updateBook(id: number,book: Book): Observable<Book>{

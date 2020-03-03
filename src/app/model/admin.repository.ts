@@ -13,4 +13,9 @@ export class AdminRepository{
     saveBook(book: Book): Observable<Book>{
         return this.dataSource.saveBook(book);
     }
+
+    deleteBook(id: number): Observable<Book>{
+        return this.dataSource.deleteBook(id);
+    }
+    
 }

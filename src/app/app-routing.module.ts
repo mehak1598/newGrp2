@@ -1,3 +1,5 @@
+import { DeleteComponent } from './delete/delete.component';
+import { InsertComponent } from './insert/insert.component';
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
 import { BookStoreComponent } from './bookstore/bookstore.component';
@@ -12,6 +14,8 @@ const routes: Routes = [
   {path:"login", component: LoginComponent},
   {path:"bookstore", component:BookStoreComponent, canActivate: [AuthGuard]},
   {path:"admin", component: AdminComponent},
+  {path:"insert", component: InsertComponent},
+  {path:"delete", component: DeleteComponent}
 
 ];
 

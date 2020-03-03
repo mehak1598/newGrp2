@@ -12,6 +12,9 @@ import { UserComponent } from './user/user.component';
 import { RegisterModule } from './register/register.module';
 import { RegisterComponent } from './register/register.component';
 import { AdminComponent } from './admin/admin.component';
+import { InsertComponent } from './insert/insert.component';
+import { UpdateComponent } from './update/update.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,7 @@ import { AdminComponent } from './admin/admin.component';
     LoginComponent,
     UserComponent,
     AdminComponent, 
-     RegisterComponent
+     RegisterComponent, InsertComponent, UpdateComponent, DeleteComponent
   ],
   imports: [
     BrowserModule,
