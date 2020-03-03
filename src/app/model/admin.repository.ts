@@ -17,5 +17,9 @@ export class AdminRepository{
     deleteBook(id: number): Observable<Book>{
         return this.dataSource.deleteBook(id);
     }
+
+    updateBook(id: number, book: Book): Observable<Book>{
+        return this.dataSource.updateBook(id, book);
+    }
     
 }

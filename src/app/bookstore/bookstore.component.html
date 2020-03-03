@@ -4,7 +4,7 @@
             <a calss="navbar-brand">
                 Book E-Commerce Website
             </a>
-            <!-- <app-cart-summary></app-cart-summary> -->
+            <app-cart-summary></app-cart-summary>
         </div>
     </div>
     <div class="row">
@@ -30,11 +30,11 @@
                     </span>
                 </h4>
                 <div class="card-text bg-white p-1">
-                    
-                    <!-- <button class="btn btn-success btn-sm float-right"
-                    (click)="addProductToCart(product)">
+                    {{book.author}}
+                    <button class="btn btn-success btn-sm float-right"
+                    (click)="addProductToCart(book)">
                         Add To Cart
-                </button> -->
+                </button>
                 </div>
             </div>
             <div class="form-inline float-left mr-1">

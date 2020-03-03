@@ -1,3 +1,7 @@
+import { CheckoutComponent } from './checkout.component';
+import { CartSummaryComponent } from './cart-summary.component';
+import { CartDetailsComponent } from './cart-details.component';
+import { Cart } from './../model/cart.model';
 import { RouterModule } from '@angular/router';
 import { ModelModule } from './../model/model.module';
 import { BookStoreComponent } from './bookstore.component';
@@ -7,13 +11,14 @@ import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
-    declarations: [BookStoreComponent],
+    declarations: [BookStoreComponent,CartDetailsComponent,CartSummaryComponent,CheckoutComponent],
     imports: [
       CommonModule,
       ModelModule,
       RouterModule,
       FormsModule
     ],
+    providers: [Cart],
     exports:[BookStoreComponent]
   })
   export class BookstoreModule { }

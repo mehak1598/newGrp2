@@ -15,6 +15,11 @@ import { AdminComponent } from './admin/admin.component';
 import { InsertComponent } from './insert/insert.component';
 import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
+import { ViewComponent } from './view/view.component';
+import { CartDetailsComponent } from './bookstore/cart-details.component';
+import { CartSummaryComponent } from './bookstore/cart-summary.component';
+import { CheckoutComponent } from './bookstore/checkout.component';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +27,8 @@ import { DeleteComponent } from './delete/delete.component';
     LoginComponent,
     UserComponent,
     AdminComponent, 
-     RegisterComponent, InsertComponent, UpdateComponent, DeleteComponent
+     RegisterComponent, InsertComponent, 
+     UpdateComponent, DeleteComponent, ViewComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +36,6 @@ import { DeleteComponent } from './delete/delete.component';
     ReactiveFormsModule,
     AppRoutingModule,
     BookstoreModule,
-    //  RegisterModule,
-    // AdminModule
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

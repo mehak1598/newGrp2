@@ -1,3 +1,7 @@
+import { CheckoutComponent } from './bookstore/checkout.component';
+import { CartDetailsComponent } from './bookstore/cart-details.component';
+import { ViewComponent } from './view/view.component';
+import { UpdateComponent } from './update/update.component';
 import { DeleteComponent } from './delete/delete.component';
 import { InsertComponent } from './insert/insert.component';
 import { AuthGuard } from './auth.guard';
@@ -15,7 +19,11 @@ const routes: Routes = [
   {path:"bookstore", component:BookStoreComponent, canActivate: [AuthGuard]},
   {path:"admin", component: AdminComponent},
   {path:"insert", component: InsertComponent},
-  {path:"delete", component: DeleteComponent}
+  {path:"delete", component: DeleteComponent},
+  {path: "update", component: UpdateComponent},
+  {path:"view", component: ViewComponent},
+  {path:"cart", component: CartDetailsComponent},
+  {path:"checkout", component: CheckoutComponent}
 
 ];
 

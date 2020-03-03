@@ -6,11 +6,6 @@
             </a>
             <!-- <app-cart-summary></app-cart-summary> -->
         </div>
-        <div class="col bg-dark text-white" float="right">
-            <button routerLink="/login">
-               logout
-            </button>
-        </div>
     </div>
     <div class="row">
         <div class="col-3 p-2">
@@ -31,10 +26,6 @@
                     {{book.title}}
                     <span class="badge badge-pill badge-primary float-right">
                         {{book.price | currency:"INR"}}
-                    </span>
-                    <span onclick="this.parentElement.style.display='none';">
-                        <button (click)="deleteBook(book.id)">Delete</button>
-
                     </span>
                 </h4>
                 <div class="card-text bg-white p-1">

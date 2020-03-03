@@ -1,3 +1,4 @@
+import { Order } from './order.model';
 
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -32,7 +33,7 @@ export class RestDataSource{
     }
 
     updateBook(id: number,book: Book): Observable<Book>{
-        return this.http.put<Book>(this.baseUrl+"/books/update"+id,book);
+        return this.http.put<Book>(this.baseUrl+"/books/update/"+id,book);
     }
 
     getUsers(): Observable<User[]>{
@@ -43,7 +44,7 @@ export class RestDataSource{
         return this.http.get<User>(this.baseUrl+"/users/"+id);
     }
 
-    // saveOrder(order: Order): Observable<Order>{
-    //     return this.http.post<Order>(this.baseUrl + "orders", order);
-    // }
+    saveOrder(order: Order): Observable<Order>{
+        return this.http.post<Order>(this.baseUrl + "/orders/save", order);
+    }
 }

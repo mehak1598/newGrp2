@@ -1,19 +1,20 @@
-import { Cart } from './../model/cart.model';
 import { Book } from './../model/book.model';
-import { BooksRepository } from './../model/books.repository';
-import { Component } from '@angular/core';
-@Component({
-    selector: "bookstore",
-    templateUrl: "bookstore.component.html"
-})
-export class BookStoreComponent {
+import { Component, OnInit } from '@angular/core';
+import { BooksRepository } from '../model/books.repository';
 
-    public selectedAuthor = null;
+@Component({
+  selector: 'app-view',
+  templateUrl: './view.component.html',
+  styleUrls: ['./view.component.scss']
+})
+export class ViewComponent {
+
+  public selectedAuthor = null;
     public booksPerPage = 3;
     public selectedPage = 1;
 
     
-    constructor(private repository: BooksRepository, private cart: Cart){
+    constructor(private repository: BooksRepository){
 
     }
 
@@ -54,7 +55,4 @@ export class BookStoreComponent {
             .fill(0).map((x, i) => i + 1); //x will always be current element and i will be always current index. This is a predefined method and its parameter are also predefined ie i and x.
     }
 
-    addProductToCart(book : Book){
-        this.cart.addLine(book);
-    }
 }
