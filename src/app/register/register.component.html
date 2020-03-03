@@ -1,0 +1,116 @@
+ <!-- <h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.minlength"> invalid email id</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">
+            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+            Register
+        </button>
+        <a routerLink="/login" class="btn btn-link">Cancel</a>
+    </div>
+</form>
+
+  -->
+
+  <!-- <div class="container-fluid">
+    <h2>User Registration</h2>
+    <form #form="ngForm" novalidate (ngSubmit)="onClick(form)" class="m-2">
+        <div class="form-group">
+            <label class="float-left">First Name</label>
+            <input class="form-control" #firstname="ngModel" name="firstname" [(ngModel)]="user.firstname" required />
+            <span *ngIf="submitted && firstname.invalid" class="text-danger">
+                First Name is required
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Last Name</label>
+            <input class="form-control" #name="ngModel" name="firstname" [(ngModel)]="user.lastname" required />
+            <span *ngIf="submitted && firstname.invalid" class="text-danger">
+                First Name is required
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Aadhar</label>
+            <input class="form-control" #aadhar="ngModel" name="aadhar" [(ngModel)]="user.aadhar" required />
+            <span *ngIf="submitted && aadhar.invalid" class="text-danger">
+                Please enter your aadhar number
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Station id</label>
+            <input class="form-control" #stationid="ngModel" name="stationid" [(ngModel)]="user.stationid" required />
+            <span *ngIf="submitted && stationid.invalid" class="text-danger">
+                Please enter your stationid
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Gender</label>
+            <input class="form-control" #gender="ngModel" name="gender" [(ngModel)]="user.gender" required />
+            <span *ngIf="submitted && gender.invalid" class="text-danger">
+                Please enter your gender
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">D.O.B</label>
+            <input class="form-control" #dob="ngModel" name="dob" [(ngModel)]="user.dob" required />
+            <span *ngIf="submitted && dob.invalid" class="text-danger">
+                Please enter your D.O.B
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Image</label>
+            <input class="form-control" #image="ngModel" name="image" [(ngModel)]="user.image" required />
+            <span *ngIf="submitted && dob.invalid" class="text-danger">
+                Please enter your Image
+            </span>
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-primary m-1" type="submit">
+                Register
+            </button>
+            <button class="btn btn-secondary m-1" routerLink="/login">
+                Back
+            </button>
+
+        </div>
+    </form>
+</div> -->
+
+
