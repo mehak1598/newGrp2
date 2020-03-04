@@ -7,7 +7,7 @@ import { ModelModule } from './../model/model.module';
 import { BookStoreComponent } from './bookstore.component';
 import { NgModule } from "@angular/core";
 import { CommonModule } from '@angular/common';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -16,6 +16,7 @@ import { FormsModule } from "@angular/forms";
       CommonModule,
       ModelModule,
       RouterModule,
+      ReactiveFormsModule,
       FormsModule
     ],
     providers: [Cart],

@@ -1,3 +1,4 @@
+import { PromoComponent } from './promo/promo.component';
 import { CheckoutComponent } from './bookstore/checkout.component';
 import { CartDetailsComponent } from './bookstore/cart-details.component';
 import { ViewComponent } from './view/view.component';
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: "update", component: UpdateComponent},
   {path:"view", component: ViewComponent},
   {path:"cart", component: CartDetailsComponent},
-  {path:"checkout", component: CheckoutComponent}
+  {path:"checkout", component: CheckoutComponent},
+  {path:"promo", component: PromoComponent}
 
 ];
 

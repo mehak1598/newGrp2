@@ -5,9 +5,11 @@
             {{cart.itemCount}} item(s)
             {{cart.cartPrice | currency:"INR"}} 
         </span>
+        
         <span *ngIf="cart.itemCount==0">
             (empty)
         </span>
+        
     </small>
     <button class="btn btn-sm bg-dark text-white"
             routerLink="/cart"

@@ -51,6 +51,7 @@ export class Cart{
  
 }
  
+@Injectable()
 export class CartLine{
     constructor(public product: Book, public quantity: number){
     }

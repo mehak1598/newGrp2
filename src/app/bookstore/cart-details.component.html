@@ -55,6 +55,18 @@
             </table>
         </div>
     </div>
+    <p *ngIf="message" class="text-center error">{{message}}</p>
+    <form [formGroup]="promoForm" id="promoForm" novalidate (ngSubmit)="checkpromo(form)" class="m-2">
+     
+        <div class="form-group">
+            <label class="float-left">Promo Code</label>
+            <input class="form-control" formControlName="promocode" />
+        </div> 
+        <div class="col-xs-12 form-group text-right">
+          <button class="btn btn-success" type="submit">Check</button>
+        </div>
+    </form>
+        
     <div class="row">
         <div class="col">
             <div class="text=center">

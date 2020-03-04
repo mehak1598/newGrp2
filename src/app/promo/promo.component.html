@@ -1,0 +1,31 @@
+<div class="container-fluid">
+<h3 class="text-center">Add Promotion</h3>
+        <form #form="ngForm" novalidate (ngSubmit)="onClick(form)" class="m-2">
+     
+            <div class="form-group">
+                <label class="float-left">Promo Code</label>
+                <input class="form-control" #promocode="ngModel" name="promocode" [(ngModel)]="promo.promocode" required />
+                <span *ngIf="submitted && promocode.invalid" class="text-danger">
+                    promocode is required
+                </span>
+            </div> 
+            
+            <div class="form-group">
+                <label class="float-left">Discount</label>
+                <input class="form-control" type="discount" #discount="ngModel" name="discount" [(ngModel)]="promo.discount" required />
+                <span *ngIf="submitted && discount.invalid" class="text-danger">
+                    Please enter discount
+                </span>
+                
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary m-1" type="submit" routerLink="/admin">
+                    Add
+                </button>
+                <button class="btn btn-secondary m-1" routerLink="/admin">
+                    Back
+                </button>
+     
+            </div>
+        </form>
+    </div>

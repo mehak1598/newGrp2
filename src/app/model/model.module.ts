@@ -1,3 +1,7 @@
+import { CartLine } from './cart.model';
+import { PromoRepository } from './promo.repository';
+import { Promo } from './promo.model';
+import { User } from './user.model';
 import { OrderRepository } from './order.repository';
 import { Book } from './book.model';
 import { AdminRepository } from './admin.repository';
@@ -9,7 +13,8 @@ import { UserRepository } from './user.repository';
 import { Order } from './order.model';
 
 @NgModule({
-    providers: [BooksRepository,RestDataSource,UserRepository, AdminRepository, Book,OrderRepository, Order],
+    providers: [BooksRepository,RestDataSource,UserRepository, 
+        AdminRepository, Book,OrderRepository, Order, User, Promo, PromoRepository,CartLine],
     imports: [HttpClientModule]
 })
 export class ModelModule{

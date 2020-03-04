@@ -1,3 +1,4 @@
+import { Promo } from './promo.model';
 import { Order } from './order.model';
 
 import { Injectable } from '@angular/core';
@@ -47,4 +48,21 @@ export class RestDataSource{
     saveOrder(order: Order): Observable<Order>{
         return this.http.post<Order>(this.baseUrl + "/orders/save", order);
     }
+
+    saveUser(user:User): Observable<User>{
+        return this.http.post<User>(this.baseUrl + "/users/register", user);
+    }
+
+    getPromos(): Observable<Promo[]>{
+        return this.http.get<Promo[]>(this.baseUrl + "/promos/all");
+    }
+
+    getPromo(id: number): Observable<Promo>{
+        return this.http.get<Promo>(this.baseUrl+"/promos/"+id);
+    }
+
+    savePromo(promo:Promo): Observable<Promo>{
+        return this.http.post<Promo>(this.baseUrl + "/promos/add", promo);
+    }
+   
 }

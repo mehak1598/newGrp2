@@ -19,6 +19,7 @@ import { ViewComponent } from './view/view.component';
 import { CartDetailsComponent } from './bookstore/cart-details.component';
 import { CartSummaryComponent } from './bookstore/cart-summary.component';
 import { CheckoutComponent } from './bookstore/checkout.component';
+import { PromoComponent } from './promo/promo.component';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { CheckoutComponent } from './bookstore/checkout.component';
     UserComponent,
     AdminComponent, 
      RegisterComponent, InsertComponent, 
-     UpdateComponent, DeleteComponent, ViewComponent
+     UpdateComponent, DeleteComponent, ViewComponent, PromoComponent
   ],
   imports: [
     BrowserModule,

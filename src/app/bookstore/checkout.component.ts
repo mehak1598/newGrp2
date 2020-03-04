@@ -1,7 +1,10 @@
+import { CartLine } from './../model/cart.model';
+import { Book } from './../model/book.model';
 import { Component, OnInit } from '@angular/core';
 import { Order } from './../model/order.model';
 import { OrderRepository } from './../model/order.repository';
 import { NgForm } from '@angular/forms';
+import { Cart } from '../model/cart.model';
 
 
 @Component({
@@ -14,7 +17,7 @@ export class CheckoutComponent implements OnInit{
   orderSent: boolean = false;
   submitted: boolean = false;
   
-  constructor(public repository: OrderRepository, public order: Order) { }
+  constructor(public repository: OrderRepository, public order: Order, public cart: Cart) { }
  
   ngOnInit() {
   }
@@ -28,6 +31,7 @@ export class CheckoutComponent implements OnInit{
         this.submitted = false;
       });
     }
+    console.log();
   }
  
 }
