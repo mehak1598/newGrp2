@@ -1,3 +1,4 @@
+import { AppService } from './../app.service';
 import { UserService } from './../user.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   message: string;
   returnUrl: string;
-  constructor(public userservice: UserService, private formBuilder: FormBuilder,private router: Router, public authService: AuthService) { }
+  constructor(public userservice: UserService, public appservice: AppService, private formBuilder: FormBuilder,private router: Router, public authService: AuthService) { }
   ngOnInit() {
   
     this.loginForm = this.formBuilder.group({
@@ -39,6 +40,7 @@ export class LoginComponent implements OnInit {
         return;
     }
     else{
+      this.appservice.setUserLoggedIn(true);
      // if(this.f.username.value == this.users.find(this.f.username.value) && this.f.password.value == this.model.password){
       for(let user of this.users)
       {
@@ -46,6 +48,7 @@ export class LoginComponent implements OnInit {
      {
        console.log("Login successful");
         //this.authService.authLogin(this.model);
+        
         localStorage.setItem('isLoggedIn', "true");
         localStorage.setItem('token', this.f.username.value);
         this.router.navigate([this.returnUrl]);

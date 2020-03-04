@@ -18,26 +18,20 @@ export class BookStoreComponent {
     }
 
     get books(): Book[]{
-        let pageIndex = (this.selectedPage - 1)* this.booksPerPage;
-        if(Math.ceil(this.repository.getBooks(this.selectedAuthor).length / this.booksPerPage) < pageIndex){
-            return this.repository.getBooks(this.selectedAuthor).slice(1, 1 + this.booksPerPage);
-        }
-        else{
-            return this.repository.getBooks(this.selectedAuthor).slice(pageIndex, pageIndex + this.booksPerPage);
-        }
-        
-
-        
+        let pageIndex=(this.selectedPage-1) * this.booksPerPage;
+        return this.repository.getBooks(this.selectedAuthor)
+        .slice(pageIndex, pageIndex+this.booksPerPage);
     }
 
     get authors(): string[]{
-        this.changePage(1);
+        
         return this.repository.getAuthors();
 
     }
 
     changeAuthor(newAuthor?: string){
         this.selectedAuthor = newAuthor;
+        this.changePage(1);
     }
 
     changePage(newPage: number) {
@@ -46,6 +40,7 @@ export class BookStoreComponent {
 
     changePageSize(newSize: number) {
         this.booksPerPage = Number(newSize);
+        this.changePage(1);
     }
 
     get pageNumbers(): number[] {

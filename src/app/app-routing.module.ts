@@ -25,7 +25,8 @@ const routes: Routes = [
   {path:"view", component: ViewComponent},
   {path:"cart", component: CartDetailsComponent},
   {path:"checkout", component: CheckoutComponent},
-  {path:"promo", component: PromoComponent}
+  {path:"promo", component: PromoComponent},
+  {path:"**", redirectTo:"/login"}
 
 ];
 
