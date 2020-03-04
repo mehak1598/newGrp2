@@ -51,11 +51,10 @@ export class Cart{
  
 }
  
-@Injectable()
 export class CartLine{
-    constructor(public product: Book, public quantity: number){
-    }
  
+    constructor(public product: Book,public quantity: number){}
+
     get lineTotal(){
         return this.quantity * this.product.price;
     }

@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Injectable } from "@angular/core";
 import { Book } from './book.model';
 import { RestDataSource } from './rest.datasource';
@@ -28,5 +29,9 @@ export class BooksRepository{
 
     getAuthors(): string[] {
         return this.authors;
+    }
+
+    updateBook(id: number, book: Book): Observable<Book>{
+        return this.dataSource.updateBook(id, book);
     }
 }

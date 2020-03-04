@@ -1,10 +1,10 @@
 <div class="container-fluid">
-    <div *ngIf="regSent" class="m-2 text-center">
+    <!-- <div *ngIf="regSent" class="m-2 text-center">
         <h1 style="color:green"> Registration Successful</h1>
         <button class="btn btn-primary"  routerLink="/login">
             Login
         </button>
-    </div>
+    </div> -->
         <h3 class="text-center">User Registration</h3>
         <form #form="ngForm" novalidate (ngSubmit)="onClick(form)" class="m-2">
      
@@ -18,18 +18,20 @@
             
             <div class="form-group">
                 <label class="float-left">Password</label>
-                <input class="form-control" type="password" #password="ngModel" name="password" [(ngModel)]="user.password" required />
+                <input class="form-control" type="password" minlength="6" #password="ngModel" name="password" [(ngModel)]="user.password" required />
                 <span *ngIf="submitted && password.invalid" class="text-danger">
                     Please enter your password
                 </span>
+                <span *ngIf="password.hasError('minlength')" class="text-danger">Password must be at least 6 characters</span>
                 
             </div>
             <div class="form-group">
                 <label class="float-left">Email</label>
-                <input class="form-control" type="email"  #email="ngModel" name="email" [(ngModel)]="user.email" required />
+                <input class="form-control" type="email" pattern=".+@.+.com" #email="ngModel" name="email" [(ngModel)]="user.email" required />
                 <span *ngIf="submitted && email.invalid" class="text-danger">
                     Please enter your Email
                 </span>
+                <span *ngIf="email.hasError('pattern')" class="text-danger">Please enter a valid Email id</span>
             </div>
             <div class="text-center">
                 <button class="btn btn-primary m-1" type="submit">

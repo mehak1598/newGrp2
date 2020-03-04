@@ -14,7 +14,7 @@ import { Order } from './order.model';
 
 @NgModule({
     providers: [BooksRepository,RestDataSource,UserRepository, 
-        AdminRepository, Book,OrderRepository, Order, User, Promo, PromoRepository,CartLine],
+        AdminRepository, Book,OrderRepository, Order, User, Promo, PromoRepository],
     imports: [HttpClientModule]
 })
 export class ModelModule{

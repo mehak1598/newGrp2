@@ -24,11 +24,16 @@ export class RegisterComponent implements OnInit {
   onClick(form: NgForm) {
     this.submitted=true;
     if(form.valid) {
+      alert("Registration successful!");
       this.repository.saveUser(this.user).subscribe(user => {
         this.user.clear();
             this.regSent=true;
             this.submitted=false;
       });
+
+      setTimeout(()=>{
+        window.location.href="/login";
+      },1000);
       
     }
   }
