@@ -18,14 +18,14 @@ const routes: Routes = [
   {path:"register", component: RegisterComponent},
   {path:"login", component: LoginComponent},
   {path:"bookstore", component:BookStoreComponent, canActivate: [AuthGuard]},
-  {path:"admin", component: AdminComponent},
-  {path:"insert", component: InsertComponent},
-  {path:"delete", component: DeleteComponent},
-  {path: "update", component: UpdateComponent},
-  {path:"view", component: ViewComponent},
-  {path:"cart", component: CartDetailsComponent},
-  {path:"checkout", component: CheckoutComponent},
-  {path:"promo", component: PromoComponent},
+  {path:"admin", component: AdminComponent , canActivate: [AuthGuard]},
+  {path:"insert", component: InsertComponent,  canActivate: [AuthGuard]},
+  {path:"delete", component: DeleteComponent,  canActivate: [AuthGuard]},
+  {path: "update", component: UpdateComponent,  canActivate: [AuthGuard]},
+  {path:"view", component: ViewComponent,  canActivate: [AuthGuard]},
+  {path:"cart", component: CartDetailsComponent,  canActivate: [AuthGuard]},
+  {path:"checkout", component: CheckoutComponent,  canActivate: [AuthGuard]},
+  {path:"promo", component: PromoComponent,  canActivate: [AuthGuard]},
   {path:"**", redirectTo:"/login"}
 
 ];

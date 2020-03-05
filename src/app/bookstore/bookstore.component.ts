@@ -14,7 +14,6 @@ export class BookStoreComponent {
 
     
     constructor(private repository: BooksRepository, private cart: Cart){
-
     }
 
     get books(): Book[]{

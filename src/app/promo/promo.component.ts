@@ -19,6 +19,7 @@ export class PromoComponent implements OnInit {
   }
 
   onClick(form: NgForm) {
+    alert("Promo added successfully");
     this.submitted=true;
     if(form.valid) {
       this.repository.savePromo(this.promo).subscribe(promo => {
@@ -26,7 +27,10 @@ export class PromoComponent implements OnInit {
             this.promoSent=true;
             this.submitted=false;
       });
-      
+      setTimeout(()=>{
+        window.location.href="/admin";
+      },500);
     }
+    
 
 }}

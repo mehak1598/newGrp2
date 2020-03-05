@@ -32,8 +32,9 @@
                         <span class="badge badge-pill badge-primary float-right">
                             {{book.price | currency:"INR"}}
                         </span>
-                        <span onclick="document.getElementById('formupdate').style.visibility='visible'">
-                            <button (click)="updateBook(book.id)">Update</button>
+                        <span onclick="document.getElementById('formupdate').style.visibility='visible';">
+                            <button (click)="updateBook(book.id)" >Update</button>
+
     
                         </span>
                     </h4>
@@ -59,15 +60,15 @@
                 </div>
             </div>
         </div>
-
-    <form id="formupdate" #form="ngForm" novalidate (ngSubmit)="updateBook(form)" class="m-2" style="visibility: hidden;">
+    
+        <form id="formupdate" #form="ngForm" novalidate (ngSubmit)="updateBook(form)" class="m-2" style="visibility: hidden;">
         <div class="form-group">
- 
-            <label>ID</label>
+
+            <label>ID:</label>
             <input type="number" class="form-control" id="id" name="id" [(ngModel)]="book.id" #name="ngModel" required/>
  
             <label>Title</label>
-            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="book.title" #name="ngModel" required />
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="book.title" #name="ngModel" required/>
  
             <label>Author</label>
             <input type="text" class="form-control" id="author" name="author" [(ngModel)]="book.author" #name="ngModel" required />
